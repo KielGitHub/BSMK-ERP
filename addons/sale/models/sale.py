@@ -780,7 +780,7 @@ class SaleOrder(models.Model):
             order.message_subscribe([order.partner_id.id])
         self.write({
             'state': 'sale',
-            'date_order': fields.Datetime.now()
+            #'date_order': fields.Datetime.now()
         })
         self._action_confirm()
         if self.env.user.has_group('sale.group_auto_done_setting'):
